@@ -1,0 +1,1 @@
+C:\Users\ignas\virtualenvs\it-fix_env\Scripts\activate
