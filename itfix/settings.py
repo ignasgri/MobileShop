@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'products',
-    'categories'
+    'categories',
+    'rest_framework',
+    'django_gravatar'
 ]
 
 MIDDLEWARE = [
