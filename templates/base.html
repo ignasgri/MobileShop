@@ -1,1 +1,78 @@
-this is base
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Our Simple Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/edit.css' %}">
+    <link rel="stylesheet" href="{% static '/css/album.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/css/font-awesome.min.css' %}">
+    
+    {% block head_js %}{% endblock %}
+</head>
+<body>
+
+        <div class="collapse" id="navbarHeader">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-7 py-3">
+                      <h4>Map</h4>
+                      <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+                    </div>
+                    <div class="col-sm-4 py-4">
+                      <h4>Contact</h4>
+                      
+                      <ul class="list-unstyled">
+                        <li><a href="#">Follow on Twitter</a></li>
+                        <li><a href="#">Like on Facebook</a></li>
+                        <li><a href="#">Email me</a></li>
+                      </ul>
+          
+                    </div>
+                    <div class="col-sm-1 py-1">
+                    <img class="button-close" src="{% static "images/close.png" %}" alt="close"  data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    </div>
+                  </div>
+                </div>
+              </div>
+               
+               <div class="container search-bar">
+                   <div class="row">
+                       <div class="col-md-12">
+                          <img class="it-fix-logo" src="{% static "images/it-fix-logo.jpg" %}" width="150px" alt="back"/>
+                           <input type="text">
+                           <button class="search-button"type="submit" >Search</button>
+                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon">Contact us</span>
+                            </button>
+                       </div>
+                   </div>
+               </div>
+                   
+          
+              <footer class="text-muted">
+                <div class="container">
+                  <p class="float-right">
+                    <a href="#">Back to top</a>
+                  </p>
+                  
+                  <p><img class="logo" src="{% static "images/pigasus-logo.png" %}" alt="back"/>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+                  <p>New to Bootstrap? <a href="../../">pigasus.ie</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+                </div>
+              </footer>
+          </div>
+          
+              <!-- Bootstrap core JavaScript
+              ================================================== -->
+              <!-- Placed at the end of the document so the pages load faster -->
+          <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+          </body>
+          
+          </html>
