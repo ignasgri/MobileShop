@@ -29,7 +29,7 @@
           
             {% for product in products %}
             <div class="card">
-                <img height="150" width="200" src="{{ MEDIA_URL }}{{ product.image1 }}">
+                <img class="presentation_image" src="{{ MEDIA_URL }}{{ product.image1 }}">
                 {{ product.name }}
                 {{ product.description }}
                 {{ product.price }}

@@ -68,5 +68,11 @@ table.table.table-striped > tbody > tr{
     margin-top: 50px;
 }
 .card{
-    width: 100px;
+    width: 220px!important;
+    height: 280px!important;
+    margin: 10px!important;
+}
+.presentation_image{
+    width: 100%;
+    position: relative;
 }
