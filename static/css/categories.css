@@ -1,0 +1,16 @@
+.categories-list{
+    font-size: 1em;
+}
+.subcat-names{
+    margin: 0px;
+    -webkit-padding-start: 10px!important;
+}
+.cat-names{
+    margin-bottom: 3px;
+}
+.panel {
+    display: none;
+}
+.panel, .flip {
+    padding: 5px;
+}

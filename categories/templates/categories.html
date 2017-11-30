@@ -4,7 +4,7 @@
 <div class="album text-muted">
         <div class="container">
           <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-3 categories-list">
                    
                             
                                {% comment %} {% block sidebar %}
@@ -25,24 +25,27 @@
                                             {% endfor %}
                                         </ol>
                                 {% endblock sidebar %} {% endcomment %}
+                                
                                 {% for category, subcategories in root_categories.items %}
-                                
-                                <li><a href="{% url 'category' category.id %}"> {{ category.name }}</a>
-                                </li>
+                                <element class="flip">
+                                <p class="cat-names">{{ category.name }}
+                                </p>
+                            </element>
+                                <element  class="panel">
                                 {% for sub in subcategories %}
-                                    <ol><a href="{% url 'category' sub.id %}">{{ sub.name }}</a></ol>                    
+                                    <ul class="subcat-names"><a href="{% url 'category' sub.id %}">{{ sub.name }}</a></ul>               
                                 {% endfor%}
-                                
+                            </element>
                                
                         {% endfor %}
                             
                         
-                            
-    
+                
+            </div>
                             
                     
                 
-            </div>
+            
             
             
 
