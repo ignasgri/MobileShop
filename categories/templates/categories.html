@@ -26,19 +26,15 @@
                                         </ol>
                                 {% endblock sidebar %} {% endcomment %}
                                 
-                                {% for category, subcategories in root_categories.items %}
-                                <element class="flip">
-                                <p class="cat-names">{{ category.name }}
-                                </p>
-                            </element>
-                                <element  class="panel">
-                                {% for sub in subcategories %}
-                                    <ul class="subcat-names"><a href="{% url 'category' sub.id %}">{{ sub.name }}</a></ul>               
+                        {% for category, subcategories in root_categories.items %}
+                            <p class="cat-names flip" style="cursor:pointer;">{{ category.name }}</p>
+                            <div class="panel">
+                            {% for sub in subcategories %}
+                                        <ul class="subcat-names"><a href="{% url 'category' sub.id %}">{{ sub.name }}</a></ul>
                                 {% endfor%}
-                            </element>
-                               
+                            </div>
                         {% endfor %}
-                            
+                    
                         
                 
             </div>
