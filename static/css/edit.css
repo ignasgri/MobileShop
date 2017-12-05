@@ -76,3 +76,7 @@ table.table.table-striped > tbody > tr{
     width: 100%;
     position: relative;
 }
+.logos{
+    margin: auto;
+    text-align: center;
+}

@@ -7,6 +7,7 @@ from django.views import static
 from .settings import MEDIA_ROOT
 from rest_framework import routers
 from products import views as product_views
+from search import urls as search_urls
 
 router = routers.DefaultRouter()
 router.register(r'products', product_views.ProductViewSet)
@@ -19,4 +20,5 @@ urlpatterns = [
     url(r'^categories/', include(categories_urls)),
     url(r'^$', get_index, name='index'),
     url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
+    url(r'^search/', include(search_urls)),
 ]

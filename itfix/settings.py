@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'products',
     'categories',
     'rest_framework',
-    'django_gravatar'
+    'django_gravatar',
+    'search'
 ]
 
 MIDDLEWARE = [
