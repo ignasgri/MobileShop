@@ -1,50 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<div class="album text-muted">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-3 categories-list">
-                   
-                            
-                               {% comment %} {% block sidebar %}
-                                    <div class="catnames">
-                                        <h4>All products</h4>
-                                {% for category in root_categories %}
-                                            <div class="category-name"><a href="{% url 'category' category.id %}">{{ category.name }}</a>
-                                            </div>
-                                {% endfor %}
-                                    </div>
-                                    <ol class="breadcrumb">
-                                            {% for crumb in crumbs %}
-                                                {% if forloop.last %}
-                                                    <li class="active">{{ crumb.name }}</li>
-                                                {% else %}
-                                                    <li><a href="{% url 'category' crumb.id %}">{{ crumb.name }}</a></li>
-                                                {% endif %}
-                                            {% endfor %}
-                                        </ol>
-                                {% endblock sidebar %} {% endcomment %}
-                                
-                        {% for category, subcategories in root_categories.items %}
-                            <p class="cat-names flip" style="cursor:pointer;">{{ category.name }}</p>
-                            <div class="panel">
-                            {% for sub in subcategories %}
-                                        <ul class="subcat-names"><a href="{% url 'category' sub.id %}">{{ sub.name }}</a></ul>
-                                {% endfor%}
-                            </div>
-                        {% endfor %}
-                    
-                        
-                
-            </div>
-                            
-                    
-                
-            
-            
-            
-
+      
         <div class="col-sm-9">
 
         <!-- <div class="row"> -->
@@ -59,15 +15,5 @@
                 </div>
         {% endfor %}
         </div>
-        </div>
-        </div>
-        </div>
-
-
-
-
-
-
-
 
 {% endblock content %}

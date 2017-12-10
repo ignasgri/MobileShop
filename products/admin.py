@@ -3,7 +3,7 @@ from .models import Product
 
 # Register your models here.
 class DisplayProduct(admin.ModelAdmin):
-    list_display = ('brand', 'name', 'price')
-    search_fields = ['brand']
+    list_display = ('name', 'brand', 'price')
+    search_fields = ['name', 'brand']
     list_filter = ('brand', 'price')
 admin.site.register(Product, DisplayProduct)

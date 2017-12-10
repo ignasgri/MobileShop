@@ -14,3 +14,9 @@
 .panel, .flip {
     padding: 5px;
 }
+
+/* products */
+
+.product-description{
+    font-size: 10px;
+}
