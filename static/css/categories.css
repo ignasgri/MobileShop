@@ -20,3 +20,34 @@
 .product-description{
     font-size: 10px;
 }
+.buy-box{
+    align-items: center;
+    height: 100px;
+    width: 110px;
+    background-color: #f2f2f2;
+    text-align: center;
+    margin: -12px;
+    position: absolute;
+    bottom: 12px;
+    justify-content: center;
+    display: flex;
+}
+.info-box{
+    align-items: center;
+    height: 100px;
+    width: 108px;
+    background-color: #ffffff;
+    text-align: center;
+    margin-left: 98px;
+    position: absolute;
+    bottom: 0px;
+    justify-content: center;
+    display: flex;
+}
+.fa-shopping-cart, .fa-info{
+    color: gray;
+    font-size: 30px!important;
+}
+.product-price{
+    text-align: center;
+}
