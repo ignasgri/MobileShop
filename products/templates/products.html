@@ -1,43 +1,84 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-            
-            
-
-        <div class="col-sm-10">
-
-        <!-- <div class="row"> -->
-          
-            {% for product in products %}
-            <div class="card">
-                <img class="presentation_image" src="{{ MEDIA_URL }}{{ product.image1 }}">
-                <h4 class="text-center">{{product.brand}} {{ product.name }}</h4>
-                <p class="text-muted product-description">{{ product.description|truncatewords:20 }}</p>
-
-                <p class="product-price">Price: €{{ product.price }}</p>
-                <div class="buy-box">
-                <a href="{{product.ebaylink}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></a>
-                </div>
-                <div class="info-box">
-                    <i class="fa fa-info" aria-hidden="true"></i>
+{% for product in products %}
+<!-- Modal -->
+<div class="md-modal md-effect-1" id="{{product.id}}"  role="dialog">
+    <div class="modal-dialog">
+        
+        <!-- Modal content-->
+        <div class="md-content">
+            <div class="modal-header">
+                <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                <h1 class="modal-title">{{product.name}}</h1>
                 </div>
             </div>
-        {% endfor %}
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <img class="pro-" src="{{ MEDIA_URL }}{{ product.image1 }}" style="width:100%;">
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <p>{{ product.description }}</p>
+                        <h2>€{{ product.price }}</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <div class="inlineButtons">
+                    <a href="{{product.ebaylink}}">Buy</a>
+                    <button type="button" class="btn btn-default md-close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
-       
 
-         <div class="pagination col-sm-12">
-                <span class="step-links">
-                    {% if products.has_previous %}
-                        <a href="?page={{ products.previous_page_number }}" class="post-meta"><i class="fa fa-angle-left fa-lg" aria-hidden="true"></i></i></a>
-                    {% endif %}
-                <span class="current">Page {{ products.number }} of {{ products.paginator.num_pages }}</span>
-                    {% if products.has_next %}
-                        <a href="?page={{ products.next_page_number }}" class="post-meta"><i class="fa fa-angle-right fa-lg" aria-hidden="true"></i></a>
-                    {% endif %}
-                </span>
+        
+    </div>
+</div>
+
+</div>
+</div>
+
+{% endfor %}
+<!--end of modal-->
+
+
+<div class="col-sm-10">
+
+    <!-- <div class="row"> -->
+        
+        {% for product in products %}
+        <div class="card">
+            <img class="presentation_image" src="{{ MEDIA_URL }}{{ product.image1 }}">
+            <h4 class="text-center">{{product.brand}} {{ product.name }}</h4>
+            <p class="text-muted product-description">{{ product.description|truncatewords:20 }}</p>
+            
+            <p class="product-price">Price: €{{ product.price }}</p>
+            <div class="buy-box">
+                <a href="{{product.ebaylink}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></a>
             </div>
-
-
-{% endblock %}
+            <div class="info-box md-trigger" data-modal="modal-1" data-target="#{{product.id}}">
+                <i class="fa fa-info" aria-hidden="true"></i>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    
+    <div class="pagination col-sm-12">
+        <span class="step-links">
+            {% if products.has_previous %}
+            <a href="?page={{ products.previous_page_number }}" class="post-meta"><i class="fa fa-angle-left fa-lg" aria-hidden="true"></i></i></a>
+            {% endif %}
+            <span class="current">Page {{ products.number }} of {{ products.paginator.num_pages }}</span>
+            {% if products.has_next %}
+            <a href="?page={{ products.next_page_number }}" class="post-meta"><i class="fa fa-angle-right fa-lg" aria-hidden="true"></i></a>
+            {% endif %}
+        </span>
+    </div>
+    
+    
+    {% endblock %}

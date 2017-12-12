@@ -9,7 +9,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
 def all_products(request):
     products = Product.objects.all()
-    paginator = Paginator(products, 5)
+    paginator = Paginator(products, 6)
     page = request.GET.get('page')
     try:
         products = paginator.page(page)

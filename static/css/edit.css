@@ -6,6 +6,22 @@ body{
     font-family: 'Roboto', 'sans-serif'!important; 
     font-size: 14px!important;
 }
+p{
+    margin-bottom: 0.5rem!important;
+    
+}
+/*modal css*/
+.fade-scale {
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    transition: all .25s linear;
+  }
+  .fade-scale.in {
+    opacity: 1;
+    transform: scale(1);
+  }
 
 .search-bar input{
     width: 70%;
