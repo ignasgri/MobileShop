@@ -3,7 +3,8 @@
 
 {% for product in products %}
 <!-- Modal -->
-<div class="md-modal md-effect-1" id="{{product.id}}"  role="dialog">
+<div class="md-modal md-effect-1" id="modal-{{product.id}}" role="dialog">
+
     <div class="modal-dialog">
         
         <!-- Modal content-->
@@ -40,6 +41,7 @@
 </div>
 
 </div>
+
 </div>
 
 {% endfor %}
@@ -60,7 +62,8 @@
             <div class="buy-box">
                 <a href="{{product.ebaylink}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></a>
             </div>
-            <div class="info-box md-trigger" data-modal="modal-1" data-target="#{{product.id}}">
+            up there
+            <div class="info-box md-trigger" data-modal="modal-{{product.id}}" data-target="#{{product.id}}">
                 <i class="fa fa-info" aria-hidden="true"></i>
             </div>
         </div>
