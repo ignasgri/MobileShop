@@ -23,7 +23,7 @@
 .buy-box{
     align-items: center;
     height: 100px;
-    width: 110px;
+    width: 125px;
     background-color: #f2f2f2;
     text-align: center;
     margin: -12px;
@@ -35,10 +35,10 @@
 .info-box{
     align-items: center;
     height: 100px;
-    width: 108px;
+    width: 125px;
     background-color: #ffffff;
     text-align: center;
-    margin-left: 98px;
+    margin-left: 110px;
     position: absolute;
     bottom: 0px;
     justify-content: center;

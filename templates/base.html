@@ -65,7 +65,7 @@
                       <div class="row">
                         <div class="col-sm-2 categories-list">
                                     {% for category, subcategories in root_categories.items %}
-                                        <p class="cat-names flip" style="cursor:pointer;">{{ category.name }}</p>
+                                        <p class="cat-names flip" style="cursor:pointer;"><i class="fa fa-angle-right" aria-hidden="true"></i> {{ category.name }}</p>
                                         <div class="panel">
                                         {% for sub in subcategories %}
                                                     <ul class="subcat-names"><a href="{% url 'category' sub.id %}">{{ sub.name }}</a></ul>
@@ -91,7 +91,7 @@
             <img class="it-fix-logo" src="{% static "images/lg.png" %}" width="100px" alt="back"/>                    
             <img class="it-fix-logo" src="{% static "images/sony.png" %}" width="100px" alt="back"/>                    
             
-        
+            <a href="#" id="toTop">scrole to top</a>
         
         </div>
 

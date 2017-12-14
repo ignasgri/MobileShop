@@ -19,7 +19,9 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-sm-6 col-md-6 col-lg-6">
-                        <img class="pro-" src="{{ MEDIA_URL }}{{ product.image1 }}" style="width:100%;">
+                        <img class="pro-" src="{{ MEDIA_URL }}{{ product.image1 }}" style="width:100%; padding-bottom:5px;">
+                        <img class="presentation_image" src="{{ MEDIA_URL }}{{ product.image2 }}" style="width:100%; padding-bottom:5px;">
+                        <img class="presentation_image" src="{{ MEDIA_URL }}{{ product.image3 }}" style="width:100%; ">
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-6">
                         <p>{{ product.description }}</p>
@@ -62,7 +64,6 @@
             <div class="buy-box">
                 <a href="{{product.ebaylink}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></a>
             </div>
-            up there
             <div class="info-box md-trigger" data-modal="modal-{{product.id}}" data-target="#{{product.id}}">
                 <i class="fa fa-info" aria-hidden="true"></i>
             </div>
