@@ -23,6 +23,7 @@
                   <div class="row">
                     <div class="col-sm-7 py-3">
                       <h4>Map</h4>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2381.662392660598!2d-6.2714644!3d53.3492994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670c29e1c51c4d%3A0xb345a18cd61d2117!2sIT+Fix!5e0!3m2!1sen!2sus!4v1496319839749" width="400" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
                       <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
                     </div>
                     <div class="col-sm-4 py-4">
@@ -91,17 +92,16 @@
             <img class="it-fix-logo" src="{% static "images/lg.png" %}" width="100px" alt="back"/>                    
             <img class="it-fix-logo" src="{% static "images/sony.png" %}" width="100px" alt="back"/>                    
             
-            <a href="#" id="toTop">scrole to top</a>
+            
         
         </div>
 
             </br>
               <footer class="text-muted">
                 <div class="container">
-                  <p class="float-right">
-                    <a href="#">Back to top</a>
+                  <p>
+                      <div class="float-right" id="toTop">Back to top</div>
                   </p>
-                  
                   <p><img class="logo" src="{% static "images/pigasus-logo.png" %}" alt="back"/>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
                   <p>New to Bootstrap? <a href="../../">pigasus.ie</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
                 </div>
@@ -116,12 +116,12 @@
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-          <script rel="stylesheet" src="{% static '/js/edit.js' %}"></script>
          <script src="https://use.fontawesome.com/4f2b93cb03.js"></script>
          <script rel="stylesheet" src="{% static '/js/classie.js' %}"></script>
          <script rel="stylesheet" src="{% static '/js/modalEffects.js' %}"></script>
          <script rel="stylesheet" src="{% static '/js/cssParser.js' %}"></script>          
          {% comment %} <script rel="stylesheet" src="{% static '/js/css-filters-polyfill.js' %}"></script> {% endcomment %}
+         <script rel="stylesheet" src="{% static '/js/edit.js' %}"></script>
          
           
         </body>

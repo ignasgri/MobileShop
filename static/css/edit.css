@@ -10,6 +10,9 @@ p{
     margin-bottom: 0.5rem!important;
     
 }
+#navbarHeader{
+    background-color: #f7f7f7;
+}
 /*modal css*/
 .fade-scale {
     transform: scale(0);
@@ -55,7 +58,7 @@ p{
 .together{
     display: inline;
 }
-    button{
+button{
     border: none;
     background: none;
 }
