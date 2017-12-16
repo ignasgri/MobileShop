@@ -8,7 +8,6 @@ body{
 }
 p{
     margin-bottom: 0.5rem!important;
-    
 }
 #navbarHeader{
     background-color: #f7f7f7;
@@ -102,4 +101,21 @@ table.table.table-striped > tbody > tr{
 .pagination{
     text-align: center;
     display: inline!important;
+}
+.contact-info{
+    display: inline-block;
+}
+.advertrs-ebay{
+    display: inline-block;
+    text-align: center;
+}
+.fa-twitter-square, .fa-facebook-square, .fa-phone-square{
+    color: #989898
+}
+.seller{
+    font-family: "Abel";
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 25px;
+    padding-bottom: 10px;
 }
