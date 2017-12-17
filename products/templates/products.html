@@ -18,22 +18,26 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-sm-6 col-md-6 col-lg-6">
-                        <img class="pro-" src="{{ MEDIA_URL }}{{ product.image1 }}" style="width:100%; padding-bottom:5px;">
-                        <img class="presentation_image" src="{{ MEDIA_URL }}{{ product.image2 }}" style="width:100%; padding-bottom:5px;">
-                        <img class="presentation_image" src="{{ MEDIA_URL }}{{ product.image3 }}" style="width:100%; ">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <img class="modal-img-main" src="{{ MEDIA_URL }}{{ product.image1 }}" style="width:100%; padding-bottom:5px;">
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-6">
-                        <p>{{ product.description }}</p>
-                        <h2>€{{ product.price }}</h2>
+                    <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <img class="modal-img" src="{{ MEDIA_URL }}{{ product.image2 }}" style="width:100%; padding-bottom:5px;">
+                        <img class="modal-img" src="{{ MEDIA_URL }}{{ product.image3 }}" style="width:100%; ">
+                    </div>
+                    </div>
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                        <p class="scroll">{{ product.description }}</p>
+                        <h2 class="price">price €{{ product.price }}</h2>
                     </div>
                 </div>
             </div>
             
             <div class="modal-footer">
-                <div class="inlineButtons">
-                    <a href="{{product.ebaylink}}">Buy</a>
-                    <button type="button" class="btn btn-default md-close" data-dismiss="modal">Close</button>
+                <div class="inline-buttons">
+                    <button type="button"><a href="{{product.ebaylink}}">Buy</a></button>
+                    <button type="button" class="md-close" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

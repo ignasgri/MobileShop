@@ -3,7 +3,16 @@
 }
 .subcat-names{
     margin: 0px;
+    text-decoration: none;
     -webkit-padding-start: 10px!important;
+}
+.subcat-names:hover{
+    margin: 0px;
+    text-decoration: none;
+    -webkit-padding-start: 10px!important;
+}
+.cat-names:hover{
+    font-weight: bold;
 }
 .cat-names{
     margin-bottom: 3px;
@@ -43,11 +52,25 @@
     bottom: 0px;
     justify-content: center;
     display: flex;
+    cursor: pointer;
+}
+.fa-info:hover{
+    color: #4d71eb;
+    margin:50px;
+}
+
+.fa-shopping-cart:hover{
+    color: #be7075
 }
 .fa-shopping-cart, .fa-info{
     color: gray;
     font-size: 30px!important;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 .product-price{
     text-align: center;
+    margin-bottom: 1rem!important;
 }

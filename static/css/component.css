@@ -83,7 +83,7 @@ perspective effects (not including the modals and the overlay).
 	padding: 15px 40px 30px;
 	margin: 0;
 	font-weight: 300;
-	font-size: 1.15em;
+	/* font-size: 1.15em; */
 }
 
 .md-content > div p {

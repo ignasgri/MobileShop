@@ -33,3 +33,13 @@ $(document).ready(function(){
           return false;
       });
   });
+//enlarge image in modal
+
+$(".modal-img").click(function() {
+    $('.modal-img1').css('display', 'none');
+  });
+$(".modal-img").click(function() {
+    $('.transform').toggleClass('transform-active');
+    $('.modal-img').css('width', '100%!important');
+    
+  });
