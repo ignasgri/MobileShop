@@ -128,12 +128,15 @@ table.table.table-striped > tbody > tr{
     margin: auto;
     margin-top: 0px;
 }
-.modal-image .modal-img-main{
+.modal-image{
     width: 100%;
     width: 200px;
     position: relative;
     margin: auto;
     margin-top: 0px;
+}
+.modal-img-main{
+    width: 200px!important;
 }
 .logos{
     margin: auto;
@@ -169,7 +172,7 @@ table.table.table-striped > tbody > tr{
     width: 65%!important;
     font-size: 65%!important;
 }
-.modal-img{
+.modal-img-main{
     width: 49%!important;
     display: inline-block;
     padding-bottom: 0px!important;
@@ -185,7 +188,7 @@ table.table.table-striped > tbody > tr{
     font-size: 70%!important;
 }
 .modal-img{
-    width: 49%!important;
+    width: 100%!important;
     display: inline-block;
     padding-bottom: 0px!important;
 }
@@ -204,12 +207,12 @@ table.table.table-striped > tbody > tr{
         font-size: 90%!important;
     }
     .modal-img{
-        width: 49%!important;
+        width: 100%!important;
         display: inline-block;
         padding-bottom: 0px!important;
     }
     .modal-img-main{
-        width: 80%!important;
+        width: 100%!important;
 
         /* display: inline-block;
         padding-bottom: 0px!important; */
@@ -224,12 +227,12 @@ table.table.table-striped > tbody > tr{
             font-size: 90%!important;
         }
         .modal-img{
-            width: 49%!important;
+            width: 100%!important;
             display: inline-block;
             padding-bottom: 0px!important;
         }
         .modal-img-main{
-            width: 80%!important;
+            width: 100%!important;
     
             /* display: inline-block;
             padding-bottom: 0px!important; */
