@@ -46,11 +46,9 @@
                         <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i> Like on Facebook</a></li>
                         <li><a href="#"><img src="{% static "images/email.png" %}" alt="email" style="width:13.5px; margin-left: -1px;"></i> Email me</a></li>
                         <li><a href="#"></a><i class="fa fa-phone-square" aria-hidden="true"></i> 087 7777 77</li>
+                        <li> <a href="https://www.google.ie/search?q=IT+Fix,+111+Capel+St,+North+City,+Dublin+1,+Ireland&ludocid=12917908732441862423&gws_rd=cr&dcr=0&ei=AeU4WpSfGObGgAaxyJrgAQ#lrd=0x48670c29e1c51c4d:0xb345a18cd61d2117,1"><i class="fa fa-pencil-square" aria-hidden="true"></i> Customer's reviews</a></li>
                       </ul>
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2381.662392660598!2d-6.2714644!3d53.3492994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670c29e1c51c4d%3A0xb345a18cd61d2117!2sIT+Fix!5e0!3m2!1sen!2sus!4v1496319839749 "width="200" height="200" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-                      
-          
-                    </div>
+                      </div>
                     <div class="col-sm-1 py-1">
                     <img class="button-close" src="{% static "images/close.png" %}" alt="close"  data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
                     </div>
@@ -64,10 +62,12 @@
                         <form method='GET' action="{% url 'search' %}">
                           <img class="it-fix-logo" src="{% static "images/it-fix-logo.jpg" %}" width="150px" alt="back"/>
                           <input type="text" name="search" class="search-form-control" placeholder="Search">
-                          <button id="search_button" type="submit" class="search-button">Search</button>
+                          <div class="grouped-buttons">
+                          <button id="search_button" type="submit" class="search-button"><span><i class="fa fa-search" aria-hidden="true"></i> Search</span></button>
                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon">Contact us</span>
+                                <span class="navbar-toggler-icon contact-us"><i class="fa fa-question" aria-hidden="true"></i></span>
                               </button>
+                          </div>
                         </form> 
                            
                        </div>
@@ -115,7 +115,7 @@
               <footer class="text-muted">
                 <div class="container">
                   <p>
-                      <div class="float-right" id="toTop">Back to top</div>
+                      <div class="float-right" id="toTop">Back to top <i class="fa fa-long-arrow-up" aria-hidden="true"></i></div>
                   </p>
                   <p><img class="logo" src="{% static "images/pigasus-logo.png" %}" alt="back"/>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
                   <p>New to Bootstrap? <a href="../../">pigasus.ie</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
