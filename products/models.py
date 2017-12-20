@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 from django.utils import timezone
 from django.db import models
+from categories.models import Category
 
 
 Condition = (
@@ -11,6 +12,7 @@ Condition = (
 class Product(models.Model):
     brand = models.CharField(max_length=50, default='')
     name = models.CharField(max_length=254, default='')
+    category = models.ManyToManyField(Category)
     condition = models.CharField(max_length=4, choices=Condition, default='New')
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=0)
@@ -27,3 +29,5 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    
