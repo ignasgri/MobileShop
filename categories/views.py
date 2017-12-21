@@ -23,9 +23,10 @@ def get_category(request, id):
         crumbs.insert(0, crumb)
         crumb = crumb.parent
 
-    subcategories = Category.objects.filter(parent=this_category)
 
-    products = this_category.products.all()
+    subcategories = Category.objects.filter(parent=this_category)
+    products = Product.objects.filter(category__in=[this_category])
+    # products = this_category.products.all()
 
     args = { 'categories': subcategories, 'products': products, 'crumbs': crumbs}
     return render(request, 'categories.html', args)

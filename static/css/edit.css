@@ -10,6 +10,9 @@ a{
     text-decoration: none!important;
     color:#777878!important;
 }
+.album {
+    min-height: 5rem!important;
+}
 .scroll{
     overflow: scroll;
     margin-top: 5px!important;
@@ -76,6 +79,7 @@ a{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    cursor:pointer;
 }
 .search-button{
     color: #fff;
@@ -97,6 +101,7 @@ a{
 .button-close{
     width: 20px;
     margin: 10px;
+    cursor:pointer;
 }
 .logo{
     width: 30px;
