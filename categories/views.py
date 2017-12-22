@@ -1,6 +1,11 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Category
 from products.models import Product
+from rest_framework import viewsets
+from products.serializers import ProductSerializer
+from django.template.context_processors import csrf
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 
 # Create your views here.
 def root_categories(request):
@@ -42,3 +47,29 @@ def root_categories_context(request):
         category_tree[category] = sub_categories
 
     return {'root_categories': category_tree}
+
+
+# Create your views here.
+def index(request):
+    products = Product.objects.all()
+    paginator = Paginator(products, 3)
+    page = request.GET.get('page')
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
+    args = {}
+    args.update(csrf(request))
+    return render(request, "categories.html", {"products": products}, args)
+
+
+
+
+class ProductViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer

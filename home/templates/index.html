@@ -1,77 +1,38 @@
 {% extends 'base.html' %}
 {% load static from staticfiles%}
 {% block content %}
-<div class="col-sm-9">
+<div class="col-sm-10">
         
-                <!-- <div class="row"> -->
-                  
-                    {% for product in products %}
-                    <div class="card">
-                        <img class="presentation_image" src="{{ MEDIA_URL }}{{ product.image1 }}">
-                        {{ product.name }}
-                        {{ product.description }}
-                        {{ product.price }}
-                        <p>this is new phone1</p>
-                        </div>
-                {% endfor %}
+            <!-- <div class="row"> -->
+                
+                {% for product in products %}
+                <div class="card">
+                    <img class="presentation_image" src="{{ MEDIA_URL }}{{ product.image1 }}">
+                    <h4 class="text-center">{{product.brand}} {{ product.name }}</h4>
+                    <p class="text-muted product-description">{{ product.description|truncatewords:20 }}</p>
+                    
+                    <p class="product-price">Price: €{{ product.price }}</p>
+                    <div class="buy-box">
+                        <a href="{{product.ebaylink}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></a>
+                    </div>
+                    <div class="info-box md-trigger" data-modal="modal-{{product.id}}" data-target="#{{product.id}}">
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                    </div>
                 </div>
-{% comment %} <div class="album text-muted">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-3">
-
-                                {% for category, subcategories in root_categories.items %}
-                                <p class="cat-names flip" style="cursor:pointer;">{{ category.name }}</p>
-                                <div class="panel">
-                                {% for sub in subcategories %}
-                                            <ul class="subcat-names"><a href="{% url 'category' sub.id %}">{{ sub.name }}</a></ul>
-                                    {% endfor%}
-                                </div>
-                            {% endfor %}
-
+                {% endfor %}
             </div>
             
             
-
-        <div class="col-sm-9">
-
-        <!-- <div class="row"> -->
-                <div class="col-sm-9">
-                        
-                                <!-- <div class="row"> -->
-                                  
-                                    {% for product in products %}
-                                    <div class="card">
-                                        <img class="presentation_image" src="{{ MEDIA_URL }}{{ product.image1 }}">
-                                        {{ product.name }}
-                                        {{ product.description }}
-                                        {{ product.price }}
-                                        <p>this is new phone1</p>
-                                        </div>
-                                {% endfor %}
-                                </div>
-
-            
-          this is place for all products
-            {% for product in products %}
-            <div class="card">
-                <img class="presentation_image" src="{{ MEDIA_URL }}{{ product.image1 }}">
-                {{ product.name }}
-                {{ product.description }}
-                {{ product.price }}
-                <p>this is new phone1</p>
-                </div>
-        {% endfor %}
-        </div>
-        </div>
-        </div>
-        </div>
-
-
-
-
-
- {% endcomment %}
-
+            <div class="pagination col-sm-12">
+                <span class="step-links">
+                    {% if products.has_previous %}
+                    <a href="?page={{ products.previous_page_number }}" class="post-meta"><i class="fa fa-angle-left fa-lg" aria-hidden="true"></i></i></a>
+                    {% endif %}
+                    <span class="current">Page {{ products.number }} of {{ products.paginator.num_pages }}</span>
+                    {% if products.has_next %}
+                    <a href="?page={{ products.next_page_number }}" class="post-meta"><i class="fa fa-angle-right fa-lg" aria-hidden="true"></i></a>
+                    {% endif %}
+                </span>
+            </div>
 
 {% endblock content %}
