@@ -50,8 +50,12 @@ def root_categories_context(request):
 
 
 # Create your views here.
-def index(request):
-    products = Product.objects.all()
+def categories_paginator(request, id):
+    this_category = get_object_or_404(Category, pk=id)
+
+    # subcategories = Category.objects.filter(parent=this_category)
+    products = Product.objects.filter(category__in=[this_category])
+    # products = Product.objects.all()
     paginator = Paginator(products, 3)
     page = request.GET.get('page')
     try:
