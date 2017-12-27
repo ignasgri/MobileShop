@@ -35,7 +35,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def latest_products(request):
     products = Product.objects.filter(published_date__lte=timezone.now()
-        ).order_by('-published_date')[0:12]
+        ).order_by('-published_date')[0:999]
     paginator = Paginator(products, 6)
     page = request.GET.get('page')
     try:

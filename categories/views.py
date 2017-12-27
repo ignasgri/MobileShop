@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Category
 from products.models import Product
 from rest_framework import viewsets
+from django.utils import timezone
 from products.serializers import ProductSerializer
 from django.template.context_processors import csrf
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -20,7 +21,8 @@ def root_categories(request):
 def get_category(request, id):
     this_category = get_object_or_404(Category, pk=id)
     # root_categories = Category.object.filter(parent=None)
-
+    products = Product.objects.filter(published_date__lte=timezone.now()
+        ).order_by('-published_date')[0:999]
     crumbs = []
 
     crumb = this_category
