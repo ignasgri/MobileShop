@@ -1,7 +1,7 @@
 from django.conf.urls import url, include
 from django.contrib import admin
 from home.views import latest_products
-from categories.views import categories_paginator
+# from categories.views import categories_paginator
 from products import urls as products_urls
 from categories import urls as categories_urls
 from django.views import static

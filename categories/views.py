@@ -11,53 +11,31 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
 def root_categories(request):
     categories = Category.objects.filter(parent=None)
-    # procucts = Product.object.all()
-    
-
-    args = { 'categories': categories, 'subcategories': {}, 'products': {}}
+    products = Product.objects.all().order_by('-published_date')[0:999]
+    paginator = Paginator(products, 6)
+    page = request.GET.get('page')
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
+    args = { 'categories': categories, 'subcategories': {}, 'products': products}
     return render(request, 'categories.html', args)
 
 
 def get_category(request, id):
     this_category = get_object_or_404(Category, pk=id)
     # root_categories = Category.object.filter(parent=None)
-    products = Product.objects.filter(published_date__lte=timezone.now()
-        ).order_by('-published_date')[0:999]
     crumbs = []
-
     crumb = this_category
+    
     while crumb != None:
         crumbs.insert(0, crumb)
         crumb = crumb.parent
 
-
     subcategories = Category.objects.filter(parent=this_category)
-    products = Product.objects.filter(category__in=[this_category])
-    # products = this_category.products.all()
-
-    args = { 'categories': subcategories, 'products': products, 'crumbs': crumbs}
-    return render(request, 'categories.html', args)
-
-
-def root_categories_context(request):
-    categories = Category.objects.filter(parent=None)
-
-    category_tree = {}
-
-    for category in categories:
-        sub_categories = Category.objects.filter(parent=category)
-        category_tree[category] = sub_categories
-
-    return {'root_categories': category_tree}
-
-
-# Create your views here.
-def categories_paginator(request, id):
-    this_category = get_object_or_404(Category, pk=id)
-
-    # subcategories = Category.objects.filter(parent=this_category)
-    products = Product.objects.filter(category__in=[this_category])
-    # products = Product.objects.all()
+    products = Product.objects.filter(category__in=[this_category]).order_by('-published_date')[0:999]
     paginator = Paginator(products, 3)
     page = request.GET.get('page')
     try:
@@ -66,12 +44,17 @@ def categories_paginator(request, id):
         products = paginator.page(1)
     except EmptyPage:
         products = paginator.page(paginator.num_pages)
-    args = {}
-    args.update(csrf(request))
-    return render(request, "categories.html", {"products": products}, args)
+    args = { 'categories': subcategories, 'products': products, 'crumbs': crumbs}
+    return render(request, 'categories.html', args)
 
 
-
+def root_categories_context(request):
+    categories = Category.objects.filter(parent=None)
+    category_tree = {}
+    for category in categories:
+        sub_categories = Category.objects.filter(parent=category)
+        category_tree[category] = sub_categories
+    return {'root_categories': category_tree}
 
 class ProductViewSet(viewsets.ModelViewSet):
     """
