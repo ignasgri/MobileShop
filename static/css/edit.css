@@ -170,6 +170,7 @@ table.table.table-striped > tbody > tr{
 .pagination{
     text-align: center;
     display: inline!important;
+    top: 20px;
 }
 .contact-info{
     display: inline-block;
@@ -191,10 +192,31 @@ table.table.table-striped > tbody > tr{
 .price{
     float: right;
 }
-@media only screen and (max-width: 540px){
+@media only screen and (min-width: 1px) and (max-width: 375px){
 .card{
-    float: right!important;
-    top: -130px;
+    float: left;
+    position: none;
+    width: 100%!important;
+    max-width: 250px!important;
+}
+.buy-box {
+    width: 50%!important;
+}
+.info-box {
+    width: 50%!important;
+}
+}
+@media only screen and (min-width: 375px) and (max-width: 420px){
+    .card{
+        float: left;
+        position: none;
+        padding-left: 20px;
+    }
+    }
+@media only screen and (min-width: 420px) and (max-width: 540px){
+.card{
+        top: -140px;
+        margin-left: 110px!important;
 }
 .container{
     width: 90%!important;
@@ -240,6 +262,12 @@ table.table.table-striped > tbody > tr{
 }}
 
 @media screen and (min-width: 541px) and (max-width: 769px){
+/* .card{
+    left: 40px!important;
+} */
+.categories-list{
+    width: 200px;
+}
 .container{
     width: 90%!important;
     /* max-width: 100%; */

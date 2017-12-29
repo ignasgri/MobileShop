@@ -27,14 +27,14 @@
                     
                     
                     <div class="pagination col-sm-12">
-                        <span class="step-links">
-                            {% if products.has_previous %}
-                            <a href="?page={{ products.previous_page_number }}" class="post-meta"><i class="fa fa-angle-left fa-lg" aria-hidden="true"></i></i></a>
-                            {% endif %}
-                            <span class="current">Page {{ products.number }} of {{ products.paginator.num_pages }}</span>
-                            {% if products.has_next %}
-                            <a href="?page={{ products.next_page_number }}" class="post-meta"><i class="fa fa-angle-right fa-lg" aria-hidden="true"></i></a>
-                            {% endif %}
-                        </span>
-                    </div>
+                            <span class="step-links">
+                                {% if products.has_previous %}
+                                <a href="?page={{ products.previous_page_number }}" class="post-meta"><i class="fa fa-angle-left fa-lg right-arrow" aria-hidden="true"></i></i></a>
+                                {% endif %}
+                                <span class="current">Page <span style="font-weight:900; font-size:20px">{{ products.number }} </span>of <span style="font-weight:900; font-size:20px"> {{ products.paginator.num_pages }}</span></span>
+                                {% if products.has_next %}
+                                <a href="?page={{ products.next_page_number }}" class="post-meta"><i class="fa fa-angle-right fa-lg left-arrow" aria-hidden="true"></i></a>
+                                {% endif %}
+                            </span>
+                        </div>
 {% endblock content %}
