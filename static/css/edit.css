@@ -110,6 +110,11 @@ a{
 .it-fix-logo{
     padding: 20px;
 }
+.brand-logo{
+    padding: 20px;
+    width: 100px; 
+    filter: grayscale(1);
+}
 .together{
     display: inline;
 }
