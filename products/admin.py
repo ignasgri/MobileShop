@@ -8,7 +8,7 @@ class DisplayProduct(admin.ModelAdmin):
     list_display = ('brand', 'name', 'price', 'published_date')
     search_fields = ['name', 'brand']
     list_filter = ('brand', 'price')
-    list_editable = ['price', 'published_date']
+    list_editable = ['price']
 
     # formfield_overrides = {
     #     # Django enforces maximum field length of 14 onto 'title' field when user is editing in the change form
