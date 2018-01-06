@@ -1,6 +1,14 @@
 /*green color #aee808*/
 input {
-    border-width: none!important;
+    padding-left: 10px; 
+    border-width: 1px!important;
+    border-top-width: 1px!important;
+    border-right-width: 1px!important;
+    border-bottom-width: 1px!important;
+    border-left-width: 1px!important;
+    border-style: solid!important;
+    border-color: #ebebeb!important;
+    border-image: none!important;
 }
 body{
     font-family: 'Roboto', 'sans-serif'!important; 
@@ -167,6 +175,9 @@ table.table.table-striped > tbody > tr{
 }
 .modal-img-main{
     width: 200px!important;
+}
+.modal-header{
+    border: none!important;
 }
 .logos{
     margin: auto;

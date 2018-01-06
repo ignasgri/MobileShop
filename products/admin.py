@@ -5,7 +5,7 @@ from django.db import models
 
 # Register your models here.
 class DisplayProduct(admin.ModelAdmin):
-    list_display = ('brand', 'name', 'price', 'published_date')
+    list_display = ('name', 'brand', 'price', 'published_date')
     search_fields = ['name', 'brand']
     list_filter = ('brand', 'price')
     list_editable = ['price']

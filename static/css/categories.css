@@ -29,6 +29,8 @@
 
 .product-description{
     font-size: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .buy-box{
     align-items: center;
