@@ -36,14 +36,14 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 def latest_products(request):
     products = Product.objects.filter(published_date__lte=timezone.now()
         ).order_by('-published_date')[0:999]
-    paginator = Paginator(products, 6)
-    page = request.GET.get('page')
-    try:
-        products = paginator.page(page)
-    except PageNotAnInteger:
-        products = paginator.page(1)
-    except EmptyPage:
-        products = paginator.page(paginator.num_pages)
+    # paginator = Paginator(products, 6)
+    # page = request.GET.get('page')
+    # try:
+    #     products = paginator.page(page)
+    # except PageNotAnInteger:
+    #     products = paginator.page(1)
+    # except EmptyPage:
+    #     products = paginator.page(paginator.num_pages)
     args = {}
     args.update(csrf(request))
     return render(request, "index.html", {'products': products})

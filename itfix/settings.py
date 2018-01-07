@@ -84,15 +84,15 @@ WSGI_APPLICATION = 'itfix.wsgi.application'
 
 # ONLINE DATABASE
 DATABASES={'default': dj_database_url.parse('postgres://zplwwsugbmcswx:cc417dc7114e396e790ef9418b76c9ed5a2384502cceb80ebcf8aa05ab4f0c9a@ec2-54-217-218-80.eu-west-1.compute.amazonaws.com:5432/d1gkc6flij4h1c')}
-DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL')) }
+# DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL')) }
 
 #LOCAL DATABASE
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 
 # Password validation
