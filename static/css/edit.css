@@ -179,6 +179,12 @@ table.table.table-striped > tbody > tr{
 .modal-header{
     border: none!important;
 }
+.modal-dialog {
+    margin: 10px auto!important;
+}
+.modal-title {
+    padding-top: 15px!important;
+}
 .logos{
     margin: auto;
     text-align: center;
@@ -206,7 +212,9 @@ table.table.table-striped > tbody > tr{
     padding-bottom: 10px;
 }
 .price{
+    padding: 10px;
     float: right;
+    font-size: 20px;
 }
 @media only screen and (min-width: 1px) and (max-width: 375px){
 .card{

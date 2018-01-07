@@ -65,6 +65,10 @@
 .fa-shopping-cart:hover{
     color: #be7075
 }
+.fa-sign-out:hover{
+    color: #303331;
+    cursor: pointer;
+}
 .fa-shopping-cart, .fa-info{
     color: gray;
     font-size: 30px!important;
@@ -73,6 +77,13 @@
     padding-left: 50px;
     padding-right: 50px;
 }
+.fa-sign-out{
+    color: gray;
+    font-size: 30px!important;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    float: right;
+}
 .product-price{
     text-align: center;
     margin-bottom: 1rem!important;
@@ -80,4 +91,10 @@
 .left-arrow, .right-arrow{
     font-size:1.5em!important; 
     vertical-align: 0%!important;
+}
+.left-arrow{
+    padding: 5px 50px 5px 5px;
+}
+.right-arrow{
+    padding: 5px 5px 5px 50px;
 }
