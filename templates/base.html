@@ -74,7 +74,7 @@
             <div class="row">
                 <div class="col-xs-5 py-3">
                     <h4>Map</h4>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2381.662392660598!2d-6.2714644!3d53.3492994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670c29e1c51c4d%3A0xb345a18cd61d2117!2sIT+Fix!5e0!3m2!1sen!2sus!4v1496319839749 "width="400" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2381.662392660598!2d-6.2714644!3d53.3492994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670c29e1c51c4d%3A0xb345a18cd61d2117!2sIT+Fix!5e0!3m2!1sen!2sus!4v1496319839749 " frameborder="0" style="border:0" allowfullscreen=""></iframe>
                 </div>
                 <div class="col-sm-4 py-3 contact-info">
                     <h4>About Us</h4>
@@ -87,7 +87,8 @@
                         </div>
                     </p>
                 </div>
-                <div class="col-sm-2 py-3">
+                <div class="col-xm-1 col-sm-2 py-3 contacts">
+                    <div class="social-box">
                     <h4>Address:</h4>
                     <ul class="list-unstyled text-muted">
                         <li>111 Capel St, North City, Dublin 1, Ireland</li>
@@ -98,7 +99,9 @@
                         <li><i class="fa fa-phone-square" aria-hidden="true"></i> +353 89 444 4344</li>                        
                         <li><a href="#"><img src="{% static "images/email.png" %}" alt="email" style="width:13.5px; margin-left: -1px;"></i> Email me</a></li>                        
                     </ul>
+                    </div>
         
+                    <div class="social-box">
                     <h4>Social media</h4>
                     <ul class="list-unstyled text-muted">
                         <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i> Follow on Twitter</a></li>
@@ -106,6 +109,7 @@
                         <li> <a href="https://www.google.ie/search?q=IT+Fix,+111+Capel+St,+North+City,+Dublin+1,+Ireland&ludocid=12917908732441862423&gws_rd=cr&dcr=0&ei=AeU4WpSfGObGgAaxyJrgAQ#lrd=0x48670c29e1c51c4d:0xb345a18cd61d2117,1"><i class="fa fa-pencil-square" aria-hidden="true"></i> Customer's reviews</a></li>
                     </ul>
                 </div>
+                    </div>
                 <div class="col-sm-1 py-1">
                     <img class="button-close" src="{% static "images/close.png" %}" alt="close"  data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
                 </div>
@@ -117,7 +121,7 @@
         <div class="row">
             <div class="col-md-12">
                 <form method='GET' action="{% url 'search' %}">
-                    <a href="/"><img class="it-fix-logo" src="{% static "images/it-fix-logo.jpg" %}" width="150px" alt="back"/></a>
+                    <a href="/"><img class="it-fix-logo" src="{% static "images/it-fix-logo.jpg" %}" alt="back"/></a>
                     <input type="text" name="q" class="search-form-control" placeholder="Search">
                     <div class="grouped-buttons">
                         <button id="search_button" type="submit" class="search-button"><span><i class="fa fa-search" aria-hidden="true"></i> Search</span></button>

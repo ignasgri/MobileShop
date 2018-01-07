@@ -20,6 +20,7 @@ a{
 }
 .py-3 {
 padding-left: 1rem;
+padding-right: 1rem;
 }
 .album {
     min-height: 5rem!important;
@@ -119,6 +120,7 @@ padding-left: 1rem;
     height: 30px;
 }
 .it-fix-logo{
+    width: 150px;
     padding: 20px;
 }
 .brand-logo{
@@ -219,12 +221,17 @@ table.table.table-striped > tbody > tr{
     float: right;
     font-size: 20px;
 }
-@media only screen and (min-width: 1px) and (max-width: 375px){
+.map{
+    width:400px;
+    height: 300px;
+}
+@media only screen and (min-width: 1px) and (max-width: 480px){
 .card{
-    float: left;
+    float: none!important;
     position: none;
     width: 100%!important;
     max-width: 250px!important;
+    margin: auto!important;
 }
 .buy-box {
     width: 50%!important;
@@ -232,15 +239,47 @@ table.table.table-striped > tbody > tr{
 .info-box {
     width: 50%!important;
 }
+.contacts{
+    margin: auto;
+    padding-left: 25px!important;
+    width: 190px!important;
+}.social-box{
+    display: inline-block;
 }
-@media only screen and (min-width: 375px) and (max-width: 420px){
-    .card{
-        float: left;
-        position: none;
-        padding-left: 20px;
-    }
-    }
-@media only screen and (min-width: 420px) and (max-width: 540px){
+.button-close {
+    width: 20px;
+    margin: 10px;
+    cursor: pointer;
+    float: right;
+}
+.map{
+    max-width: 100%;
+    position: relative;
+}.it-fix-logo{
+    margin: auto;
+    display: flex;
+}
+.container{
+    width: 90%!important;
+    /* max-width: 100%; */
+}
+.md-modal{
+    width: 65%!important;
+    font-size: 65%!important;
+}
+.modal-img{
+    width: 100%!important;
+}
+.modal-img-main{
+    width: 200px!important;
+    position: relative;
+}
+.modal-title{
+    font-size: 25px;
+}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 540px){
 .card{
         top: -140px;
         margin-left: 110px!important;
