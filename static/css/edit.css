@@ -18,6 +18,9 @@ a{
     text-decoration: none!important;
     color:#777878!important;
 }
+.py-3 {
+padding-left: 1rem;
+}
 .album {
     min-height: 5rem!important;
 }
