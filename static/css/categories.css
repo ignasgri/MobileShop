@@ -32,6 +32,9 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+.product-title-h2{
+    padding-left: 12px;
+}
 .buy-box{
     align-items: center;
     height: 100px;

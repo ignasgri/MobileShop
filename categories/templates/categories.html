@@ -4,7 +4,10 @@
 <div class="col-sm-10">
                 
                     <!-- <div class="row"> -->
-                        
+                        <!-- {% for product in products %}
+                            <h2 class="product-title-h2">{{ product.brand }}</h2>
+                        {% endfor %} -->
+
                         {% for product in products %}
                         <div class="card">
                             <img class="presentation_image" src="{{ MEDIA_URL }}{{ product.image1 }}">

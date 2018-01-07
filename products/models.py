@@ -18,9 +18,9 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=0)
     ebaylink = models.CharField(max_length=999, default='')
-    image1 = models.ImageField(upload_to='images', blank=True, null=True)
-    image2 = models.ImageField(upload_to='images', blank=True, null=True)
-    image3 = models.ImageField(upload_to='images', blank=True, null=True)
+    image1 = models.ImageField(upload_to='images', default='images/default.jpg', blank=True, null=True)
+    image2 = models.ImageField(upload_to='images', default='images/default.jpg', blank=True, null=True)
+    image3 = models.ImageField(upload_to='images', default='images/default.jpg', blank=True, null=True)
     published_date = models.DateTimeField(blank=True, null=True)
 
 
