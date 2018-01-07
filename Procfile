@@ -1,0 +1,1 @@
+web: gunicorn itfix.wsgi:application
