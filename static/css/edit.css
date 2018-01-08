@@ -232,6 +232,7 @@ table.table.table-striped > tbody > tr{
     width: 100%!important;
     max-width: 250px!important;
     margin: auto!important;
+    margin-bottom: 10px!important;
 }
 .buy-box {
     width: 50%!important;
@@ -277,109 +278,21 @@ table.table.table-striped > tbody > tr{
 .modal-title{
     font-size: 25px;
 }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 540px){
-.card{
-        top: -140px;
-        margin-left: 110px!important;
-}
-.container{
-    width: 90%!important;
-    /* max-width: 100%; */
-}
-.md-modal{
-    width: 65%!important;
-    font-size: 65%!important;
-}
-.modal-img{
-    width: 100%!important;
-}
-.modal-img-main{
-    width: 100%!important;
-    position: relative;
-}
-.inline-buttons{
-    font-size: 14px;
-}
-.grouped-buttons{
-    margin: auto;
-    float: right;
-    margin-top: 10px;
-}
 .search-button {
     color: #fff;
     background-color: #aee808;
     height: 40px;
-    width: 40px;
+    max-width: 80px;
 }
-.search-button span {
-    display: none;
-  }
-.search-button:after {
-    font-family: FontAwesome; 
-    content: '\f002';
-}
-.search-bar input{
-    width: 100%;
+.search-bar input {
+    max-width: 50%;
     margin: auto;
     height: 40px;
     border-width: none!important;
-}}
+}
+}
 
-@media screen and (min-width: 541px) and (max-width: 769px){
-/* .card{
-    left: 40px!important;
-} */
-.categories-list{
-    width: 200px;
-}
-.container{
-    width: 90%!important;
-    /* max-width: 100%; */
-}
-.md-modal{
-    width: 65%!important;
-    max-height: 95%!important;
-    font-size: 70%!important;
-}
-.modal-img{
-    width: 100%!important;
-    display: inline-block;
-    padding-bottom: 0px!important;
-}
-.modal-img-main{
-    width: 100%!important;
-    /* display: inline-block;
-    padding-bottom: 0px!important; */
-}
-.inline-buttons{
-    font-size: 14px;
-}
-/* .grouped-buttons{
-    display: inline;
-    float: right;
-    margin-top: 5px;
-} */
-.search-button {
-    color: #fff;
-    background-color: #aee808;
-    height: 40px;
-    width: 40px;
-}
-.search-button span {
-    display: none;
-  }
-.search-button:after {
-    font-family: FontAwesome; 
-    content: '\f002';
-}
-.search-bar input{
-    width: 40%;
-    height: 40px;
-    border-width: none!important;
-}}
-@media screen and (min-width: 770px) and (max-width: 1024px){
+@media screen and (min-width: 481px) and (max-width: 1024px){
 .md-modal {
     width: 65%!important;
     max-height: 95%!important;
