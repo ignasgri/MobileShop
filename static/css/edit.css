@@ -278,6 +278,9 @@ table.table.table-striped > tbody > tr{
 .modal-title{
     font-size: 25px;
 }
+.modal-footer {
+    padding: 0px!important;
+}
 .search-button {
     color: #fff;
     background-color: #aee808;
@@ -285,74 +288,213 @@ table.table.table-striped > tbody > tr{
     max-width: 80px;
 }
 .search-bar input {
-    max-width: 50%;
+    max-width: 100%;
     margin: auto;
     height: 40px;
     border-width: none!important;
 }
+.categories-list {
+    font-size: 1em;
+    margin: auto;
+    width: 130px!important;
+}
+.product-title-h2 {
+    text-align: center;
+    margin: 20px 0px
+}
+.right-arrow {
+    margin-left: -50px;
+}
+.left-arrow {
+    padding: 5px 0px 5px 5px!important;
+}
 }
 
 @media screen and (min-width: 481px) and (max-width: 1024px){
-.md-modal {
-    width: 65%!important;
-    max-height: 95%!important;
-    font-size: 90%!important;
-}
-.modal-img{
-    width: 100%!important;
-    display: inline-block;
-    padding-bottom: 0px!important;
-}
-.modal-img-main{
-    width: 100%!important;
-
-    /* display: inline-block;
-    padding-bottom: 0px!important; */
-}
-.inline-buttons{
-    font-size: 14px;
-}
-.search-bar input{
-    width: 50%;
-    height: 40px;
-    border-width: none!important;
-}}
-@media screen and (min-width: 1024px) and (max-width: 3000px){
-.md-modal {
-    width: 65%!important;
-    max-height: 95%!important;
-    font-size: 90%!important;
-}
-.modal-img{
-    width: 100%!important;
-    display: inline-block;
-    padding-bottom: 0px!important;
-}
-.modal-img-main{
-    width: 100%!important;
-
-    /* display: inline-block;
-    padding-bottom: 0px!important; */
-}
-.inline-buttons{
-    font-size: 14px;
-}
-.md-modal {
-    width: 65%!important;
-    max-height: 95%!important;
-    font-size: 90%!important;
-}
-.modal-img{
-    width: 100%!important;
-    display: inline-block;
-    padding-bottom: 0px!important;
-}
-.modal-img-main{
-    width: 100%!important;
-
-    /* display: inline-block;
-    padding-bottom: 0px!important; */
-}
+    .card{
+        float: none!important;
+        position: none;
+        width: 100%!important;
+        max-width: 250px!important;
+        margin-bottom: 10px!important;
+        display: inline-block!important;
+    }
+    .buy-box {
+        width: 50%!important;
+    }
+    .info-box {
+        width: 50%!important;
+    }
+    .contacts{
+        margin: auto;
+        padding-left: 25px!important;
+        width: 190px!important;
+    }.social-box{
+        display: inline-block;
+    }
+    .button-close {
+        width: 20px;
+        margin: 10px;
+        cursor: pointer;
+        float: right;
+    }
+    .map{
+        max-width: 100%;
+        position: relative;
+    }.it-fix-logo{
+        margin: auto;
+        display: flex;
+    }
+    .container{
+        width: 90%!important;
+        /* max-width: 100%; */
+    }
+    .md-modal{
+        max-width: 500px!important;
+        font-size: 65%!important;
+    }
+    .modal-img{
+        width: 100%!important;
+    }
+    .modal-img-main{
+        width: 100%!important;
+        position: relative;
+    }
+    .modal-title{
+        font-size: 25px;
+    }
+    .modal-footer {
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center!important;
+        -webkit-box-pack: center!important;
+        -webkit-justify-content: center!important;
+        -ms-flex-pack: !important;
+        justify-content: center!important;
+        padding: 0px!important;
+        margin-left: -35px;
+    }
+    .search-button {
+        color: #fff;
+        background-color: #aee808;
+        height: 40px;
+        max-width: 80px;
+    }
+    .search-bar input {
+        max-width: 100%;
+        margin: auto;
+        height: 40px;
+        border-width: none!important;
+    }
+    .categories-list {
+        font-size: 1em;
+        /* margin: auto; */
+        width: 130px!important;
+    }
+    .product-title-h2 {
+        text-align: center;
+        margin: 20px 0px
+    }
+    .right-arrow {
+        margin-left: -50px;
+    }
+    .left-arrow {
+        padding: 5px 0px 5px 5px!important;
+    }
+    }
+@media only screen and (min-width: 1024px) and (max-width: 3000px){
+    .card{
+        float: none!important;
+        position: none;
+        width: 100%!important;
+        max-width: 250px!important;
+        margin-bottom: 10px!important;
+        display: inline-block!important;
+    }
+    .buy-box {
+        width: 50%!important;
+    }
+    .info-box {
+        width: 50%!important;
+    }
+    .contacts{
+        margin: auto;
+        padding-left: 25px!important;
+        width: 190px!important;
+    }.social-box{
+        display: inline-block;
+    }
+    .button-close {
+        width: 20px;
+        margin: 10px;
+        cursor: pointer;
+        float: right;
+    }
+    .map{
+        max-width: 100%;
+        position: relative;
+    }.it-fix-logo{
+        margin: auto;
+        display: flex;
+    }
+    .container{
+        width: 90%!important;
+        /* max-width: 100%; */
+    }
+    .md-modal{
+        max-width: 500px!important;
+        font-size: 65%!important;
+    }
+    .modal-img{
+        width: 100%!important;
+    }
+    .modal-img-main{
+        width: 100%!important;
+        position: relative;
+    }
+    .modal-title{
+        font-size: 35px;
+    }
+    .modal-footer {
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center!important;
+        -webkit-box-pack: center!important;
+        -webkit-justify-content: center!important;
+        -ms-flex-pack: !important;
+        justify-content: center!important;
+        padding: 0px!important;
+        margin-left: -35px;
+    }
+    .search-button {
+        color: #fff;
+        background-color: #aee808;
+        height: 40px;
+        max-width: 80px;
+    }
+    .search-bar input {
+        max-width: 100%;
+        margin: auto;
+        height: 40px;
+        border-width: none!important;
+    }
+    .categories-list {
+        font-size: 1em;
+        /* margin: auto; */
+        width: 130px!important;
+    }
+    .product-title-h2 {
+        text-align: center;
+        margin: 20px 0px
+    }
+    .right-arrow {
+        margin-left: -50px;
+    }
+    .left-arrow {
+        padding: 5px 0px 5px 5px!important;
+    }
 .inline-buttons{
     font-size: 14px;
 }}
