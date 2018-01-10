@@ -225,20 +225,97 @@ table.table.table-striped > tbody > tr{
     width:400px;
     height: 300px;
 }
-@media only screen and (min-width: 1px) and (max-width: 480px){
+@media only screen and (min-width: 1px) and (max-width: 321px){
+    .info-box {
+        width: 50%!important;
+        /* margin-left: 130px!important; */
+    }
+    .categories-list{
+        margin: auto;
+        width: 130px!important;
+        font-size: 14px;
+    }
+    form{
+        text-align: center;
+    }
+    .modal-body{
+        padding-bottom: 0px!important;
+        padding-top: 0px!important;
+    }
+    .md-modal{
+        width: 35%!important;
+        font-size: 55%!important;
+        /* max-width: 400px!important; */
+        min-width: 280px!important;
+        height: 400px!important;
+    }
+    .modal-img{
+        width: 150%!important;
+    }
+    .modal-img-main{
+        width: 150%!important;
+        position: relative;
+    }
+    .modal-title{
+        font-size: 20px;
+    }
+    .modal-footer {
+        padding: 0px!important;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center!important;
+        -webkit-box-pack: center!important;
+        -webkit-justify-content: center!important;
+        -ms-flex-pack: !important;
+        justify-content: center!important;
+        margin-left: -35px;
+        height: 70px;
+    }
+    .map {
+        max-width: 100%;
+    }
+    .button-close {
+        float: right;
+    }
+    .search-bar input {
+        width: 80%;
+        margin-bottom: 10px;
+}
+.container {
+    width: 90%!important;
+    /* max-width: 100%; */
+}
+.scroll {
+    max-height: 80px;
+}
+.price {
+    padding: 0px!important;
+    font-size: 10px;
+    margin: 0px!important;
+    padding-bottom: 5px!important;
+}
+.md-content > div {
+    max-height: 380px;
+}.pagination {
+    padding-left: 70px!important;
+}}
+@media only screen and (min-width: 321px) and (max-width: 480px){
 .card{
     float: none!important;
     position: none;
     width: 100%!important;
-    max-width: 250px!important;
+    max-width: 300px!important;
     margin: auto!important;
     margin-bottom: 10px!important;
+    height: 450px!important;
 }
 .buy-box {
     width: 50%!important;
 }
 .info-box {
     width: 50%!important;
+    margin-left: 130px!important;
 }
 .contacts{
     margin: auto;
@@ -252,6 +329,12 @@ table.table.table-striped > tbody > tr{
     margin: 10px;
     cursor: pointer;
     float: right;
+}
+.grouped-buttons {
+    padding-bottom: 10px;
+    text-align: right;
+    width: 100%;
+    padding-top: 5px;
 }
 .map{
     max-width: 100%;
@@ -272,7 +355,7 @@ table.table.table-striped > tbody > tr{
     width: 100%!important;
 }
 .modal-img-main{
-    width: 200px!important;
+    width: 100%!important;
     position: relative;
 }
 .modal-title{
@@ -280,6 +363,15 @@ table.table.table-striped > tbody > tr{
 }
 .modal-footer {
     padding: 0px!important;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center!important;
+    -webkit-box-pack: center!important;
+    -webkit-justify-content: center!important;
+    -ms-flex-pack: !important;
+    justify-content: center!important;
+    margin-left: -35px;
 }
 .search-button {
     color: #fff;
@@ -288,7 +380,7 @@ table.table.table-striped > tbody > tr{
     max-width: 80px;
 }
 .search-bar input {
-    max-width: 100%;
+    width: 100%;
     margin: auto;
     height: 40px;
     border-width: none!important;
@@ -312,7 +404,6 @@ table.table.table-striped > tbody > tr{
 
 @media screen and (min-width: 481px) and (max-width: 1024px){
     .card{
-        float: none!important;
         position: none;
         width: 100%!important;
         max-width: 250px!important;
@@ -343,7 +434,7 @@ table.table.table-striped > tbody > tr{
         position: relative;
     }.it-fix-logo{
         margin: auto;
-        display: flex;
+        display: flex!important;
     }
     .container{
         width: 90%!important;
@@ -393,7 +484,6 @@ table.table.table-striped > tbody > tr{
         width: 130px!important;
     }
     .product-title-h2 {
-        text-align: center;
         margin: 20px 0px
     }
     .right-arrow {
@@ -405,7 +495,6 @@ table.table.table-striped > tbody > tr{
     }
 @media only screen and (min-width: 1024px) and (max-width: 3000px){
     .card{
-        float: none!important;
         position: none;
         width: 100%!important;
         max-width: 250px!important;
@@ -436,7 +525,6 @@ table.table.table-striped > tbody > tr{
         position: relative;
     }.it-fix-logo{
         margin: auto;
-        display: flex;
     }
     .container{
         width: 90%!important;
@@ -486,7 +574,6 @@ table.table.table-striped > tbody > tr{
         width: 130px!important;
     }
     .product-title-h2 {
-        text-align: center;
         margin: 20px 0px
     }
     .right-arrow {

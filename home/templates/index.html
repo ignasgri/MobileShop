@@ -2,9 +2,7 @@
 {% load static from staticfiles%}
 {% block content %}
 <div class="col-sm-10">
-        
-            <!-- <div class="row"> -->
-                <h2 class="product-title-h2">Latest Products</h2>
+            <h2 class="product-title-h2">Latest Products</h2>
                 {% for product in products %}
                 <div class="card">
                     <img class="presentation_image" src="{{ MEDIA_URL }}{{ product.image1 }}">
