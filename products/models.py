@@ -16,7 +16,7 @@ class Product(models.Model):
     category = models.ManyToManyField(Category)
     condition = models.CharField(max_length=4, choices=Condition, default='New')
     description = models.TextField()
-    price = models.DecimalField(max_digits=6, decimal_places=0)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
     ebaylink = models.CharField(max_length=999, default='')
     image1 = models.ImageField(upload_to='images', default='images/default.jpg', blank=True, null=True)
     image2 = models.ImageField(upload_to='images', default='images/default.jpg', blank=True, null=True)
