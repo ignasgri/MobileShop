@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="{% static 'css/component.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}"/>    
+    <link href="https://bootswatch.com/4/simplex/bootstrap.min.css" rel="stylesheet">
+    
     {% block head_js %}{% endblock %}
 </head>
 <body>
@@ -116,6 +118,10 @@
             </div>
         </div>
     </div>
+
+
+
+    
     <!-- Search fierld -->
     <div class="container search-bar">
         <div class="row">
@@ -135,22 +141,40 @@
         </div>
     </div>
     
+    <!--bootstrap navigation start-->
+<div class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a href="../" class="navbar-brand">Bootswatch</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+                <a href="/products"><p class="cat-names" style="cursor:pointer;"> All Products</p></a>
+                
+            <ul class="navbar-nav">
+                    {% for category, subcategories in root_categories.items %}
+              <li class="nav-item dropdown">    
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="{{category.name}}">{{category.name}} <span class="caret"></span></a>
+                <div class="dropdown-menu" aria-labelledby="{{category.name}}">
+                        {% for sub in subcategories %}
+                        <ul class="subcat-names"><a href="{% url 'category' sub.id %}">{{ sub.name }}</a></ul>
+                        {% endfor%}
+                    {% endfor %}
+                 
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+<!--bootstrap navigation end-->
     
     <!-- Navigation bar -->
     <div class="album text-muted">
         <div class="container">
             <div class="row">
-                <div class="col-sm-2 categories-list">
-                    <a href="/products"><p class="cat-names flip" style="cursor:pointer;"><i class="fa fa-angle-right" aria-hidden="true"></i> All Products</p></a>
-                    {% for category, subcategories in root_categories.items %}
-                    <p class="cat-names flip" style="cursor:pointer;"><i class="fa fa-angle-right" aria-hidden="true"></i> {{ category.name }}</p>
-                    <div class="panel">
-                        {% for sub in subcategories %}
-                        <ul class="subcat-names"><a href="{% url 'category' sub.id %}">{{ sub.name }}</a></ul>
-                        {% endfor%}
-                    </div>
-                    {% endfor %}
-                </div>
+                <!--product cards for products app-->
                 {% block content %}
                 {%endblock%}
             </div>

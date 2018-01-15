@@ -12,7 +12,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 def root_categories(request):
     categories = Category.objects.filter(parent=None)
     products = Product.objects.all().order_by('-published_date')[0:999]
-    paginator = Paginator(products, 6)
+    paginator = Paginator(products, 8)
     page = request.GET.get('page')
     try:
         products = paginator.page(page)
