@@ -15,8 +15,8 @@
 .cat-names:hover{
     font-weight: bold;
 }
-.cat-names{
-    margin-bottom: 3px;
+p.cat-names{
+    margin: auto;
 }
 .panel {
     display: none;

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{% static 'css/component.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}"/>    
-    <link href="https://bootswatch.com/4/simplex/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://bootswatch.com/4/simplex/bootstrap.min.css" rel="stylesheet"> -->
     
     {% block head_js %}{% endblock %}
 </head>
@@ -142,7 +142,7 @@
     </div>
     
     <!--bootstrap navigation start-->
-<div class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <div class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
           <a href="../" class="navbar-brand">Bootswatch</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -166,10 +166,39 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
 
 <!--bootstrap navigation end-->
-    
+    <div class="container">
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Navbar</a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a href="/products"><p class="cat-names" style="cursor:pointer;"> All Products</p></a>
+        </li>
+        {% for category, subcategories in root_categories.items %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{category.name}}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            {% for sub in subcategories %}
+            <ul class="subcat-names"><a href="{% url 'category' sub.id %}">{{ sub.name }}</a></ul>
+            {% endfor%}
+        {% endfor %}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+
     <!-- Navigation bar -->
     <div class="album text-muted">
         <div class="container">
