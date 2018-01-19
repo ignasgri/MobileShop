@@ -17,7 +17,7 @@ class Product(models.Model):
     condition = models.CharField(max_length=4, choices=Condition, default='New')
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    ebaylink = models.CharField(max_length=999, default='')
+    ebaylink = models.CharField(max_length=999, default='noproduct')
     image1 = models.ImageField(upload_to='images', default='images/default.jpg', blank=True, null=True)
     image2 = models.ImageField(upload_to='images', default='images/default.jpg', blank=True, null=True)
     image3 = models.ImageField(upload_to='images', default='images/default.jpg', blank=True, null=True)

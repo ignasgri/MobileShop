@@ -24,8 +24,6 @@ def all_products(request):
     return render(request, "products.html", {"products": products}, args)
 
 
-
-
 class ProductViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.

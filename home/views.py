@@ -32,6 +32,11 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 #     """
 #     queryset = Product.objects.all()
 #     serializer_class = ProductSerializer
+def no_product(request):
+    products = Product.objects.all()
+    return render(request, 'noproduct.html')
+
+
 
 def latest_products(request):
     products = Product.objects.filter(published_date__lte=timezone.now()
