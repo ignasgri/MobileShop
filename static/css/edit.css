@@ -230,12 +230,21 @@ table.table.table-striped > tbody > tr{
     float: right;
     font-size: 20px;
 }
+.quantity{
+    float: left;
+    font-size: 15px;
+    padding: 10px;
+    padding-top: 20px;
+}
 .map{
     width:400px;
     height: 300px;
 }
 .bg-faded{
     background-color: white!important;
+}
+.not-available{
+    margin: auto!important;
 }
 @media only screen and (min-width: 1px) and (max-width: 321px){
     .info-box {
@@ -301,16 +310,23 @@ table.table.table-striped > tbody > tr{
 .scroll {
     max-height: 80px;
 }
-.price {
+/* .price {
     padding: 0px!important;
     font-size: 10px;
     margin: 0px!important;
     padding-bottom: 5px!important;
-}
+} */
 .md-content > div {
     max-height: 380px;
 }.pagination {
     padding-left: 70px!important;
+}
+.quantity{
+    font-size: 12px!important;
+    
+}.price, .price-for-media{
+    font-size: 12px!important;
+    padding: 10px 0px;
 }}
 @media only screen and (min-width: 321px) and (max-width: 480px){
 .card{
@@ -412,6 +428,13 @@ table.table.table-striped > tbody > tr{
 .left-arrow {
     padding: 5px 0px 5px 5px!important;
 }
+.quantity{
+    font-size: 16px!important;
+    
+}.price, .price-for-media{
+    font-size: 16px!important;
+    padding: 10px 0px;
+}
 }
 
 @media screen and (min-width: 481px) and (max-width: 1024px){
@@ -503,6 +526,13 @@ table.table.table-striped > tbody > tr{
     }
     .left-arrow {
         padding: 5px 0px 5px 5px!important;
+    }
+    .quantity{
+        font-size: 20px!important;
+        
+    }.price, .price-for-media{
+        font-size: 20px!important;
+        padding: 10px 0px;
     }
     }
 @media only screen and (min-width: 1024px) and (max-width: 3000px){

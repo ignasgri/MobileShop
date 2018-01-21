@@ -17,6 +17,7 @@
 }
 p.cat-names{
     margin: auto;
+    padding-right: 15px;
 }
 .panel {
     display: none;

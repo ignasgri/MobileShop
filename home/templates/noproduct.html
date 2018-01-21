@@ -1,6 +1,42 @@
 {% extends "base.html" %}
 {% load static from staticfiles%}
 {% block content %}
-<h1 class="text-center"> Sorry, this product is not available online. </h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 text-center">
+            <img src="{% static "images/not.png" %}" alt="not" width="200px">
+        </div>
+        <div class="col-sm-9 not-available">
+            <h1 class="text-center"> Sorry, this product is not available online, </h1>
+            <h3 class="text-center">however this product is available in your loacal it-fix shop,</h3>
+            <h3 class="text-center">please contact us for more information!</h3>
+            
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-sm-4">
+            <ul class="list-unstyled text-muted">
+                <li>65 Abbey Street Middle</li>
+                <li>Dublin, Ireland</li>
+                <li>087 333 3313</li>
+            </ul>
+        </div>
+            <div class="col-sm-4">
+                <ul class="list-unstyled text-muted">
+                    <li>111 Capel Street</li>
+                    <li>Dublin, Ireland</li>
+                    <li>(01) 872 7134</li>
+                </ul>   
+            </div>
+        <div class="col-sm-4">
+            <ul class="list-unstyled text-muted">
+                <li>176 Parnell Street</li>
+                <li>Dublin, Ireland<li>
+                <li>089 444 4344</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 
 {% endblock content %}
