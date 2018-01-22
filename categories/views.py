@@ -8,6 +8,7 @@ from django.template.context_processors import csrf
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
+
 # Create your views here.
 def root_categories(request):
     categories = Category.objects.filter(parent=None)
@@ -55,6 +56,7 @@ def root_categories_context(request):
         sub_categories = Category.objects.filter(parent=category)
         category_tree[category] = sub_categories
     return {'root_categories': category_tree}
+
 
 class ProductViewSet(viewsets.ModelViewSet):
     """
