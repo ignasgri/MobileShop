@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from django.contrib import admin
-from home.views import latest_products, no_product
+from home.views import latest_products, no_product, get_index
 # from categories.views import categories_paginator
 from products import urls as products_urls
 from categories import urls as categories_urls
@@ -21,8 +21,8 @@ urlpatterns = [
     url(r'^products/', include(products_urls)),
     url(r'^categories/', include(categories_urls)),
     url(r'^noproduct/', no_product, name='no_product'),
-    # url(r'^$', get_index, name='index'),
-    url(r'^$', latest_products, name='index'),
+    url(r'^$', get_index, name='index'),
+    # url(r'^$', latest_products, name='index'),
     url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
     url(r'^search/', include(search_urls)),
     

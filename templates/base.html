@@ -39,7 +39,7 @@
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 col-lg-12">
-                                    <div class="swiper-container">
+                                    <div class="swiper-container s2">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide"><img class="modal-img-main" src="{{ MEDIA_URL }}{{ product.image1 }}" style="width:100%; padding-bottom:5px;"></div>
                                             <div class="swiper-slide"><img class="modal-img" src="{{ MEDIA_URL }}{{ product.image2 }}" style="width:100%; padding-bottom:5px;"></div>
@@ -126,7 +126,7 @@
     <!-- Search fierld -->
     <div class="container search-bar">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 text-center">
                 <form method='GET' action="{% url 'search' %}">
                     <a href="/"><img class="it-fix-logo" src="{% static "images/it-fix-logo.jpg" %}" alt="back"/></a>
                     <input type="text" name="q" class="search-form-control" placeholder="Search">
@@ -171,13 +171,13 @@
 
 <!--bootstrap navigation end-->
     <div class="container">
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#"></a>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav text-center text-center2">
         <li class="nav-item active">
             <a href="/products"><p class="cat-names" style="cursor:pointer;"> All Products</p></a>
         </li>
@@ -197,11 +197,12 @@
     </div>
   </nav>
 </div>
-
-
+<div class="container">
+<hr>
+</div>
 
     <!-- Navigation bar -->
-    <div class="album text-muted">
+    <div class="text-muted">
         <div class="container">
             <div class="row">
                 <!--product cards for products app-->
@@ -249,7 +250,6 @@
     <script rel="stylesheet" src="{% static 'js/edit.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
     <script rel="stylesheet" src="{% static 'js/swiper.js' %}"></script>
-    
 </body>
 
 </html>

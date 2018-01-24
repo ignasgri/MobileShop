@@ -18,6 +18,12 @@ a{
     text-decoration: none!important;
     color:#777878!important;
 }
+hr{
+    margin: 0px!important;
+}
+.text-center2{
+    margin: auto;
+}
 .nav-item{
     margin: auto!important;
 }
@@ -207,6 +213,8 @@ table.table.table-striped > tbody > tr{
     text-align: center;
     display: inline!important;
     top: 20px;
+    z-index: 1;
+
 }
 .contact-info{
     display: inline-block;

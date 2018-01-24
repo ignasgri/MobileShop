@@ -6,10 +6,10 @@ from products.serializers import ProductSerializer
 from django.template.context_processors import csrf
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-# def get_index(request):
-#     products = Product.objects.all()
-#     # return render(request, 'index.html')
-#     return render(request, 'index.html', {"products": products})
+def get_index(request):
+    products = Product.objects.all()
+    # return render(request, 'index.html')
+    return render(request, 'index.html', {"products": products})
 
 # Create your views here.
 # def get_index(request):

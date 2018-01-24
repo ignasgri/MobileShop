@@ -2,7 +2,46 @@
 {% load static from staticfiles%}
 {% block content %}
 <div class="col-sm-12">
-            <h2 class="product-title-h2">Latest Products</h2>
+
+    
+
+
+    <div class="swiper-container s1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="{% static "images/broken.jpg" %}" alt="" width="100%"></div>                    
+                <div class="swiper-slide"><img src="{% static "images/broken11.jpg" %}" alt="" width="100%"></div>
+              {% comment %} <div class="swiper-slide"><img src="{% static "images/deal2.png" %}" alt="" width="100%"></div> {% endcomment %}
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            
+        </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!--{% comment %} <h2 class="product-title-h2">Latest Products</h2>
                 {% for product in products %}
                 <div class="card">
                     <img class="presentation_image" src="{{ MEDIA_URL }}{{ product.image1 }}">
@@ -30,6 +69,6 @@
                         <a href="?page={{ products.next_page_number }}" class="post-meta"><i class="fa fa-angle-right fa-lg left-arrow" aria-hidden="true"></i></a>
                         {% endif %}
                     </span>
-                </div>
+                </div> {% endcomment %}-->
 
 {% endblock content %}
