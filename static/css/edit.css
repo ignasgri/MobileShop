@@ -122,6 +122,16 @@ padding-right: 1rem;
     color: #636c72;
     padding: 0px!important;
 }
+.navbar-burger{
+    display: inline-block;
+}
+.navbar-toggler-position{
+    position: relative!important;
+    right: 0px!important;
+    width: 40px!important;
+    height: 40px!important;
+    border-radius: 0px!important;
+}
 .text-color{
     color: #636c72;
 }
